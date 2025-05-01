@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #1E1E1E;
@@ -8,6 +12,7 @@ body {
   align-items: center;
   height: 100vh;
   color: white;
+  flex-direction: column;
 }
 .main-container {
   display: flex;
@@ -100,4 +105,104 @@ body {
   margin-top: 15px;
   font-size: 18px;
   color: #007074;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    padding: 20px;
+  }
+
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .history-container,
+  .content {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .history-container {
+    max-height: 200px;
+  }
+
+  .input-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .input-box {
+    flex: 1 1 60%;
+    min-width: 200px;
+    border-radius: 20px;
+  }
+
+  .btn {
+    flex: 0 0 auto;
+    padding: 10px 14px;
+    border-radius: 50%;
+    font-size: 16px;
+  }
+
+  .header {
+    font-size: 22px;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .clear-btn {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-box {
+    flex: 1 1 100%;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .header {
+    font-size: 18px;
+    flex-direction: column;
+  }
+
+  .output {
+    font-size: 16px;
+  }
+
+  .history-item {
+    font-size: 13px;
+  }
 }

@@ -8,20 +8,20 @@
     <script src="js/script.js"></script>
 </head>
 <body>
-    <div class="main-container">
-        <div class="history-container">
-            <div id="history" class="history"><strong>Calculation History:</strong></div>
-            <button class="clear-btn" onclick="clearHistory()">Clear History</button>
-        </div>
-        <div class="content">
-            <div class="header">
-                AI Math Assistant
+    <div class="wrapper">
+        <div class="main-container">
+            <div class="history-container">
+                <div id="history" class="history"><strong>Calculation History:</strong></div>
+                <button class="clear-btn" onclick="clearHistory()">Clear History</button>
             </div>
-            <div class="input-container">
-                <input type="text" id="mathInput" class="input-box" placeholder="Enter a math expression">
-                <button class="btn" onclick="calculate()">&#10148;</button>
+            <div class="content">
+                <div class="header">AI Math Assistant</div>
+                <div class="input-container">
+                    <input type="text" id="mathInput" class="input-box" placeholder="Enter a math expression">
+                    <button class="btn" onclick="calculate()">&#10148;</button>
+                </div>
+                <div id="output" class="output"></div>
             </div>
-            <div id="output" class="output"></div>
         </div>
     </div>
 </body>
